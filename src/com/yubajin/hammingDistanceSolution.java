@@ -29,16 +29,31 @@ public class hammingDistanceSolution {
     }
 
     public static void toBin(int x){
+        print(x);
+        System.out.println();
+        System.out.println("-----------------------");
+        print1(x);
+    }
+
+    public static void print(int x){
         while(x!=0){
             System.out.print(x%2);
             x=x/2;
         }
     }
 
+    static void print1(int x){
+        if(x==0){
+            return;
+        }
+        print(x/2);
+        System.out.print(x%2);
+    }
+
     public static void main(String[] args) {
-//        toBin(10);
-        int i = hammingDistance1(1, 4);
-        System.out.println(i);
+        toBin(10);
+//        int i = hammingDistance1(1, 4);
+//        System.out.println(i);
     }
 
 }
