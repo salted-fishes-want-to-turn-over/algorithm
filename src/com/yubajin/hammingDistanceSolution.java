@@ -10,10 +10,10 @@ public class hammingDistanceSolution {
             return 0;
         }
         while(x!=0 || y!=0){
-            if(x%2 != y%2){
+            if(x%2 != y%2){ // x%2 和 x&1类似
                 count++;
             }
-            x=x/2;
+            x=x/2;          // x/2 和 x>>1类似
             y=y/2;
         }
         return count;
